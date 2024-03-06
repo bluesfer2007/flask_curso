@@ -1,0 +1,14 @@
+/* Estilos de letra */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #0ea61f; /* Color del título */
+}
+
+p {
+    color: #ad0b0b; /* Color del texto */
+    font-weight: 100;
+    font-size: larger;
+}

@@ -1,0 +1,17 @@
+
+{%extends 'file_base.html' %}
+    <h1>User IP</h1>
+    {% if user_ip %}
+    <p>La dirección IP del usuario es: {{ user_ip }}</p>
+    <p>esto es una varianble estatica: {{ variable_ejem}}</p>
+    <p>esto es una lista de valores: {{ todos}}</p>
+
+    {% else %}
+
+    <a href="{{url_for('index')}}">Ir al Inicio</a>
+    {% endif %}
+    <ul>
+        {% for to in todos %}
+            <li>{{to}}</li>
+        {%endfor%}
+    </ul>
