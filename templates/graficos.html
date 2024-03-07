@@ -1,0 +1,63 @@
+<!-- graph.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="grafico"></div>
+
+    <script>
+        // Datos para el gráfico
+        var data = [
+            { year: "year1", value: 3000 },
+            { year: "year2", value: 5000 },
+            { year: "year3", value: 1000 }
+        ];
+
+        // Dimensiones del gráfico
+        var width = 400;
+        var height = 300;
+
+        // Escala para el eje Y
+        var yScale = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.value)])
+            .range([height, 0]);
+
+        // Escala para el eje X
+        var xScale = d3.scaleBand()
+            .domain(data.map(d => d.year))
+            .range([0, width])
+            .padding(0.1);
+
+        // Crear el lienzo SVG
+        var svg = d3.select("#grafico")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Agregar barras al gráfico
+        svg.selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("x", d => xScale(d.year))
+            .attr("y", d => yScale(d.value))
+            .attr("width", xScale.bandwidth())
+            .attr("height", d => height - yScale(d.value))
+            .attr("fill", "steelblue");
+
+        // Agregar etiquetas al eje X
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(xScale));
+
+        // Agregar etiquetas al eje Y
+        svg.append("g")
+            .call(d3.axisLeft(yScale));
+    </script>
+</body>
+</html>
