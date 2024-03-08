@@ -12,3 +12,30 @@ p {
     font-weight: 100;
     font-size: larger;
 }
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    background-color: #f2f2f2; /* Color de fondo gris claro */
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333; /* Color del texto */
+}
+
+#grafico {
+    padding-top: 25px; /* Aumenta el padding superior */
+    padding-right: 20px; /* Aumenta el padding derecho */
+    padding-bottom: 5px; /* Aumenta el padding inferior */
+    padding-left: 10px; /* Aumenta el padding izquierdo */
+  }
+  
+#grafico {
+    background-color: #333;
+}

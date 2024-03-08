@@ -1,4 +1,16 @@
 <!-- graph.html -->
+
+
+{%extends 'file_base.html' %}
+
+
+{% block title %}
+    {{super()}}
+    ejemplo title
+{% endblock %}
+
+{% block content %}
+{{super()}}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráfico D3.js</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+   
 </head>
 <body>
     <div id="grafico"></div>
@@ -61,3 +74,4 @@
     </script>
 </body>
 </html>
+{%  endblock %}

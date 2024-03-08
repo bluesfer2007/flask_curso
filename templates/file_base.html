@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla con Header</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <title>
+        {% block title %}
+        Curso FlaskAPP
+        {% endblock %}
+    </title>
+    
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 
 <body>
-{% block content}
+    {% block content %}
     <header>
+        {% block menu %}
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="{{url_for('hello')}}">Home</a></li>
                 <li><a href="#">Blog</a></li>
+                <li><a href="{{url_for('graficos_js')}}">Graficos</a></li>
             </ul>
         </nav>
+        {% endblock %}
     </header>
-{% endblock %}
+    {% endblock %}
 
 </body>
+</html>
