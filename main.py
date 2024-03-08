@@ -37,6 +37,13 @@ def hello():
     }
     return render_template('hello.html', **context)
 
+#nueva ruta de html de grafico
+@app.route('/graficos')
+def graficos_js():
+    return render_template('graficos.html')
+
+
+
 
 if __name__=='__main__':
     app.run(debug=True)
