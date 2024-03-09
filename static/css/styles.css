@@ -39,3 +39,33 @@ header nav ul li a {
 #grafico {
     background-color: #333;
 }
+
+nav img {
+    /* Ajustar el tamaño de la imagen */
+    width: 200px; /* Reemplaza por el ancho deseado */
+    height: auto; /* Mantiene la altura proporcional */
+    
+    /* Posicionamiento de la imagen */
+    position: absolute;
+    top: 50%; /* Centra la imagen verticalmente */
+    left: 50%; /* Centra la imagen horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición según el ancho y alto */
+  }
+  
+  nav ul {
+    /* Posicionar la lista para que la imagen se superponga */
+    position: relative;
+  }
+  
+  nav li {
+    /* Ajustar el margen para que los botones se ajusten a la imagen */
+    margin: 0 10px;
+  }
+  #grafico {
+    /* Añadir un margen superior */
+    margin-top: 50px; /* Reemplaza por el valor deseado */
+  
+    /* Opcional: Añadir padding */
+    padding: 20px;
+  }
+  
