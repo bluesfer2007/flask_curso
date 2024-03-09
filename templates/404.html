@@ -1,0 +1,15 @@
+{%extends 'file_base.html' %}
+
+
+{% block title%}
+    {{super()}}
+    404 NO ENCONTRADO
+{% endblock %}
+
+{% block content%}
+{{super()}}
+<h1>NO SE ENCUENTRA EL CONTENIDO</h1>
+<p>Este error sucede porque el contenido que se busca no esta disponible</p>
+{{error}}
+
+{% endblock %}
